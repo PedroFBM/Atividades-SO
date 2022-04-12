@@ -34,38 +34,33 @@ while True:
         print(c + ": identificação de tipo de calculo recebido com sucesso")
         c = int(c)
 
+        valor = cliente.recv(1024)
+        valor = float(valor.decode('UTF-8'))
+
         if a == 1:
             if b == 1:
                 if c == 1:
-                    valor = cliente.recv(1024)
-                    valor = float(valor.decode('UTF-8'))
                     print(str(valor) + ": valor em celsius recebido com sucesso")
                     valor += 273
                     enviar(valor)
 
                 elif c == 2:
-                    valor = cliente.recv(1024)
-                    valor = float(valor.decode('UTF-8'))
                     print(str(valor) + ": valor em Kelvin recebido com sucesso")
                     valor -= 273
                     enviar(valor)
 
             elif b == 2:
                 if c == 1:
-                    valor = cliente.recv(1024)
-                    valor = float(valor.decode('utf-8'))
                     print(str(valor) + ": valor em Kelvin recebido com sucesso")
                     valor = valor / 1000
                     enviar(valor)
 
                 elif c == 2:
-                    valor = cliente.recv(1024)
-                    valor = float(valor.decode('utf-8'))
                     print(str(valor) + ": o valor em Km recebido com sucesso")
                     valor = valor * 1000
                     enviar(valor)
 
 
     except:
-        print("saindo")
+        print("saindo...")
         cliente, addr = server.accept()
