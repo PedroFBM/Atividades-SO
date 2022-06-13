@@ -1,0 +1,45 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #10131c;
+    padding: 10px;
+}
+
+.title{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    position: relative;
+    
+}
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+form{
+    margin: 300px auto 0;
+    max-width: 600px;
+}
+
+.ngc{
+    width: 100%;
+    position: relative;
+}
+
+.ngc_nome{
+    width: 100%;
+    padding: 25px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    background: #10131c;
+    color: aliceblue;
+    border-radius: 25px;
+    border: 2px solid white;
+}
